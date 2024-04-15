@@ -1,9 +1,9 @@
 ---
-title: "XXXXX"
+title: "Teaching Accessibly and Teaching Accessibility in Data-Intensive Courses"
 author: "Mine Dogucu <br> University of California Irvine"
-date: "XXXXX"
-subtitle: "Talk at XXXX"
-footer: "mdogucu.github.io/XXXX"
+date: "2024-04-18"
+subtitle: "Talk at AAAS-IUSE Workshop"
+footer: "mdogucu.github.io/aaas-iuse"
 format: 
   revealjs:
     slide-number: true
@@ -11,7 +11,730 @@ format:
     theme: ["style.scss"]
 ---
 
-## Slides
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+library(tidyverse)
+library(palmerpenguins)
+theme_set(theme_gray(base_size = 14))
+```
+
+
+## Some statistics from tech world
+
+- Only 4.8 % of technical roles are held by Hispanic employees, 2.4 % by Black employees and 25.8 % by women at Meta (2022)
+
+- Of Google’s technical roles in the US, 1.2 % are held by Black women, 1.3 % by Latina women, and 0.2 % by Native American women (2023)
+
+- Only 6.5% of Google’s global employees(technical and nontechnical) report having a disability, whereas World Health Organization estimates that 16% of the world's population experience significant disability (2023).
+
+## Some Problems with Tech Tools
+
+- Statistical translation tools (e.g., Google Translate) yield male pronoun defaults more frequently (Prates et al., 2019).
+- Facial recognition algorithms are much less accurate in identifying women than men, and darker-skinned people than lighter-skinned people(Raji and Buolamwini, 2019). 
+- Autonomous vehicles fail to recognize behaviors of people with disabilities (Disability Rights UK, 2021).
+
+# We must design accessible and inclusive data-intensive courses to prepare a future data workforce that is diverse.  
+
+
+
+##
+
+::: {.font150}
+Teaching Accessibly
+:::
+
+##
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<img src="img/alicia.jpeg"
+        alt="A headshot of a woman with long blonde hair wearing a brownish yellow tshirt and a red and pink floral silk scarf wrapped around her neck."
+        style="width:200px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+
+Alicia Johnson          
+Macalester College
+
+`r fontawesome::fa(name = "link")`
+<a href = "https://ajohns24.github.io/portfolio">ajohns24.github.io/portfolio</a> 
+
+`r fontawesome::fa(name = "github")`
+<a href = "https://github.com/ajohns2">ajohns24</a>  
+
+:::
+
+::: {.column width="50%"}
+
+<img src="img/miles.png"
+        alt="A headshot of a man with short dark hair, and a dark moustache. He is wearing a blue button up shirt and dark gray jacket."
+        style="width:200px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+
+Miles Ott  
+Tubi
+
+`r fontawesome::fa(name = "twitter")`
+<a href = "https://twitter.com/Miles_Ott">Miles_Ott</a>
+
+`r fontawesome::fa(name = "github")`
+<a href = "https://github.com/MilesOtt">MilesOtt</a>
+
+`r fontawesome::fa(name = "mastodon")`
+<a href = "https://mastodon.social/@Miles_Ott@aus.social">mastodon.social/ <br> @Miles_Ott@aus.social</a>
+
+:::
+
+::::
+
+##
+
+:::{.font75}
+
+Goal: 
+
+:::
+
+:::{.font50}
+
+Write a Book on Bayesian Statistics that is **Accessible and Inclusive**
+
+:::
+
+##
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 20%
+#| fig-alt: a hex shaped logo with shiny green-pink disco ball and purple starry background. There is text that says Bayes Rules!
+knitr::include_graphics("img/bayes-rules-hex.png")
+```
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+`r fontawesome::fa(name = "book")`
+<a href = "https://bayesrulesbook.com">Bayes Rules! An Introduction to Applied Bayesian Modeling</a>
+
+:::
+
+::: {.column width="50%"}
+`r fontawesome::fa(name = "r-project")`
+<a href = "https://www.github.com/bayes-rules/bayesrules">{bayesrules}</a>
+:::
+
+::::
+
+
+
+
+
+
+## Open-Access
+
+- Cost of books and supplies for a student at a four-year university in 2021 was estimated to be $1240 per year ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)). 
+
+
+- About 11% of the students indicated that they skipped meals in order to afford books and course materials ([Hanson, 2021](https://educationdata.org/average-cost-of-college-textbooks)).
+
+- The bayesrulesbook.com page has been accessed from more than 150 countries.
+
+## Assistive Technology
+
+Assistive Technology is any form of technology (software, device) that helps people with disabilities perform certain activities. 
+
+Examples:
+
+- walking sticks
+- wheel chairs
+- screen readers
+
+
+## Screen reader
+
+
+A screen reader is an assistive technology that supports blind or visually impaired people in using their computer. 
+
+##
+
+<div class="horizontal-center">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l-G4kKTuDHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The video shows use of a screen reader briefly. 
+
+</div>
+
+## Alternate Text
+
+- "Alt text" describes contents of an image. 
+- It is used in HTML pages. 
+- Screen-readers cannot read images but can read alt text. 
+- Alt text has to be provided. 
+
+## 
+
+
+```{r}
+#| fig-alt: GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created
+#| fig-align: center
+#| out-width: 100%
+knitr::include_graphics("img/alttext-github-issue.png")
+```
+
+
+## Making math accessible
+
+- Should calculus be a prerequisite?
+- Checking intuition with active learning quizzes.
+- Supporting mathematical concepts with computing.
+
+## Making learning fun 
+
+
+> How can we live if we don’t change? 
+—Beyoncé. Lyric from “Satellites.”
+
+vs.
+
+. . .
+
+> What is probability?
+
+## Embracing mistakes as part of learning
+
+> As you read the book and put Bayesian methodology into practice, you will make mistakes. Many mistakes. Making and learning from mistakes is simply part of learning. We hope that you persist through the struggle of learning so that you can contribute your unique insights, perspectives, and experiences to the Bayesian community.
+
+v.s.
+
+. . .
+
+> The proof is obvious.
+
+# Making learning relevant with diverse set of applications
+
+- Weather
+- LGBTQ+ anti-discrimination laws
+- Spotify data
+- Hotel bookings
+- Penguins
+
+##
+
+[Dogucu, M., Johnson, A. A., & Ott, M. (2023). *Framework for Accessible and Inclusive Teaching Materials for Statistics and Data Science Courses*. Journal of Statistics and Data Science Education. 31(2), 144-150.](https://www.tandfonline.com/doi/full/10.1080/26939169.2023.2165988)
+
+##
+
+::: {.font150}
+Teaching Accessibility
+:::
+
+##
+
+```{r}
+#| echo: false
+#| fig-alt: A timeline titled brief history of knitr. That points out that the initial commit was in October 2011, first download from CRAN was in October 2012, alt-text feature was requested in July 2020, feature was made available in January 2021
+#| fig-align: center
+
+date <- lubridate::as_date(c("2011-10-18", 
+                             "2012-10-01",
+                             "2020-07-19",
+                             "2021-01-22"))
+
+event <- c("initial commit", "first download from CRAN",
+           "alt-text feature requested",
+           "feature available")
+
+xend <- lubridate::as_date(c("2010-09-01", "2022-12-31"))
+
+timeline <- data.frame(date = date, event=event)
+
+timeline %>% 
+  ggplot(aes(x = date)) +
+  geom_segment(data = timeline, aes(y = 0, yend = c(5, -5, 5, -5), 
+                                    x = date, xend = date)) +
+  theme_classic() +
+  geom_hline(yintercept=0, 
+                color = "black", size = 0.3) +
+  ylim(-7,7) +
+  xlim(xend[1], xend[2]) +
+  theme(axis.line.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        axis.line.x = element_blank()) +
+  geom_text(data = timeline, x = date, y = c(-2, 2, -2, 2),
+            label = c("Oct 2011", "Oct 2012", "July 2020","Jan 2021"), 
+            angle = 90, size = 5) +
+  geom_text(data = timeline, x = date, y = c(5.5, -5.5, 5.5, -5.5),
+            label = event,
+            size=6) +
+  geom_point(aes(y = c(5, -5, 5, -5)), size=3) + 
+  labs(title = "A brief timeline of knitr") +
+  theme(plot.title = element_text(size = 20))
+
+```
+
+```{r}
+#| echo: false
+logs <- cranlogs::cran_downloads(package = "knitr", 
+                         from = "2012-10-01", 
+                         to = "2020-07-19")
+
+```
+
+
+
+Between first CRAN download and alt-text feature request, there were `r prettyNum(sum(logs$count), big.mark = ",", scientific = FALSE)` CRAN downloads of knitr.
+
+##
+
+:::: {.columns}
+
+
+::: {.column width="30%"}
+
+::: {.font50}
+Developers Create  Tools with no Accessibility Support
+:::
+
+:::
+
+::: {.column width="30%"}
+
+::: {.font50}
+Data Scientists Create Inacessible Products
+:::
+:::
+
+::::
+
+
+        
+
+
+##
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+::: {.font50}
+Curriculum Does Not Teach Accessibility
+:::
+
+:::
+
+::: {.column width="30%"}
+
+::: {.font50}
+Developers Create  Tools with no Accessibility Support
+:::
+
+:::
+
+::: {.column width="30%"}
+
+::: {.font50}
+Data Scientists Create Inacessible Products
+:::
+:::
+
+::::
+
+## 
+
+
+
+:::{.pull-left}
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 60%
+#| fig-alt: Teach Access logo that is an illustration of a bridge
+knitr::include_graphics("img/teach_access_logo.jpg")
+```
+
+Supported by the [Teach Access](https://teachaccess.org/) network.
+
+:::
+
+:::{.pull-right}
+
+<br>
+
+```{r}
+#| echo: false
+#| out-width: 60%
+#| fig-align: center
+knitr::include_graphics("img/nsf-logo.png")
+```
+
+Supported by NSF HDR DSC award #2123366
+
+
+:::
+
+
+##
+
+<img src="img/jooyoung.jpeg"
+        alt="A headshot of a man with short, straight, dark hair. He is wearing a white button up shirt and black rectangular glasses."
+        style="width:105px; margin-top:20px; border: 3px solid whitesmoke; padding: 10px;">
+
+JooYoung Seo   
+University of Illinois Urbana-Champaign
+
+`r fontawesome::fa(name = "link")`
+<a href = "https://jooyoungseo.github.io/">jooyoungseo.github.io/</a>  
+`r fontawesome::fa(name = "github")` <a href = "https://github.com/jooyoungseo">jooyoungseo</a>    
+`r fontawesome::fa(name = "twitter")` <a href = "https://twitter.com/seo_jooyoung">seo_jooyoung</a> 
+
+
+##
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 20%
+#| fig-alt: introdata.science logo with a human figure juggling charts, a computer, a database and a book
+knitr::include_graphics("img/ids-logo.png")
+```
+
+<div class="horizontal-center">
+
+`r fontawesome::fa(name = "book")`
+<a href = "https://introdata.science">Introduction to Data Science Course Website</a>
+
+</div>
+
+## Curriculum Goal
+
+As educators, we have to ensure that the current and the next generation of data scientists, provide public-facing outputs (websites, analysis reports, etc.) that are accessible.
+
+## Learning Objectives
+
+- Students should get familiar with Americans with Disabilities Act and/or United Nations Convention on the Rights of Persons with Disabilities. 
+- Students should use at least one assistive technology (i.e. screen reader).
+- Students should consider different representations of data.
+
+##
+
+```{r}
+
+```
+
+
+## Students can use screen reader on Windows and Mac
+
+- If you are on a Windows machine go to Settings > Ease of Access > Narrator, and then turn on the toggle under Use Narrator.
+
+- If you are on a Mac go to System Preferences > Accessibility > Voice Over > Enable Voice Over
+
+## Data Visualization - Colors
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 5
+#| fig-align: center
+#| fig-alt: Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are red, green, and blue respectively.
+library(palmerpenguins)
+fig <- ggplot(penguins,
+       aes(x = bill_depth_mm,
+           y = bill_length_mm,
+           shape = species,
+           color = species)) +
+  geom_point(size = 4, show.legend = FALSE) +
+  facet_grid(species~.) +
+  labs(x = "Bill Depth (mm)",
+       y = "Bill Length (mm)") +
+  theme_bw() +
+  theme(text = element_text(size = 20))
+
+fig
+```
+
+## Color Blindness Simulator 
+
+```{r}
+#| fig-align: center
+#| out-width: 40%
+#| fig-alt: A 2 by 2 grid of four scatterplots. The scatterplots are the same as the scatterplot in the previous figure except for colors. From left to right and top to bottom the plots read deutanomly, protanomly, tritanomly, and desaturated
+library(colorblindr)
+cvd_grid(fig, severity = 1) 
+```
+
+## Okabe-Ito Color Palette 
+
+
+```{r}
+#| echo: false
+#| fig-align: center 
+scales:::show_col(palette.colors(palette = "Okabe-Ito"))
+```
+
+
+
+
+##
+
+```{r}
+#| fig-align: center
+#| out-width: 45%
+#| fig-alt: Three separate scatterplots in three rows showing bill depth and bill length of three separate species of penguins Adelie, Chinstrap, and Gentoo respectively and the  points representing each observation are orange, blue, and green respectively.
+fig + colorblindr::scale_color_OkabeIto()
+
+```
+
+## Resources
+
+[Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) You can upload any image and in return get an image with colors that would be visible to color-blind people with specific color vision deficiency. 
+
+[Okabe-Ito 2008](https://jfly.uni-koeln.de/color/)  Color Universal Design. Color palette that is color-blind friendly.
+
+[Okabe-Ito color-palette](https://mikemol.github.io/technique/colorblind/2018/02/11/color-safe-palette.html) Color codes for Okabe-Ito palette. 
+
+
+## Data Verbalization
+
+
+We can verbalize data via alternate text.
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-alt: The scatterplot shows speed ranging from about 0 to 25 mph on the x-axis and dist ranging from 0 to 120 ft on the y-axis. There is a moderate positive linear relationship.
+#| fig-cap: The speed of cars (mph) and the distances (ft) taken to stop
+#| fig-height: 4
+plot(cars, cex.lab=1.5, cex.axis=1.5, cex.main=1.5, cex.sub=1.5)
+```
+
+
+## 
+
+```{r}
+#| echo: fenced
+#| fig-cap: "The speed of cars (mph) and the distances (ft) taken to stop"
+#| fig-alt: "The scatterplot shows speed ranging from about 0 to 25 mph on the x-axis and dist ranging from 0 to 120 ft on the y-axis. There is a moderate positive linear relationship."
+plot(cars)
+```
+
+
+## Manual Alternate Text
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Chart type
+
+- Type of data
+
+- Reason for including the chart
+
+- Link to data or source (not in alt text but in main text)
+
+[Cesal, 2020](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81)
+:::
+
+::: {.column width="50%"}
+- Description conveys meaning in the data
+
+- Variables included on the axes
+
+- Scale described within the description
+
+- Type of plot is described
+
+[Canelón & Hare, 2021 ](https://www.youtube.com/watch?v=DxLkv2iRdf8&ab_channel=csvconf)
+:::
+
+::::
+
+
+## Alternate Texts are Under Utilized in the Data Science Community
+
+"Over the 3 years of TidyTuesday, there were 7,136 data viz tweets and only 215 (3%) of them had alt-text"
+
+[Canelón & Hare, 2021 ](https://github.com/spcanelon/csvConf2021)
+
+## Data Sonification
+
+Data sonification is the presentation of data as sound. 
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-height: 3
+x <- 1:10
+y <- 1:10
+plot(x, y)
+
+```
+
+<audio controls>
+      <source src="audio/sonify.mp3" type="audio/mpeg">
+      Your browser does not support the audio element. </audio>
+
+## Data Tactualization
+
+Data tactulization refers to making data visualization in a form so that it can be touchable. 
+The video shows printing of a tactile boxplot.
+
+<div class="horizontal-center">
+
+<iframe  width="560" height="315" src="https://www.youtube.com/embed/ClI555l4Z1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
+## Data Tactualization
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+#| echo: true
+library(tactileR)
+brl_begin(file = 'tactile.pdf', 
+          pt = 11, 
+          paper = 'special', font='BRL')
+hist(airquality$Ozone)
+brl_end()
+```
+
+:::
+
+<!--the swell touch paper through swell form heating machine-->
+
+
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: 80%
+#| fig-alt: A histogram with x and y labels, title displayed in Braille.
+knitr::include_graphics("img/hist-braille.png")
+```
+
+:::
+
+
+::::
+
+##
+
+Different representations of data is one way of introducing accessibility to students but it is not meant to be a complete introduction to accessibility.
+
+[Seo, J. & Dogucu, M. (2023) Teaching Visual Accessibility in Introductory Data Science Classes with Multi-Modal Data Representations Journal of Data Science. 21(2), 428-441.](https://jds-online.org/journal/JDS/article/1331/info)
+
+##
+
+::: {.font100}
+Recommendations for the Community
+:::
+
+##
+
+::: {.font100}
+
+~~A picture is worth a thousand words.~~
+
+An alternate text is worth thousand pictures.
+
+:::
+
+##
+
+::: {.font100}
+
+~~Fixing a typo is a good first contribution~~
+
+Fixing a typo and writing alternate text are good first contributions.
+
+:::
+
+
+
+
+##
+
+::: {.font100}
+
+Accessibility should be taught at undergraduate, graduate, and equivalent practitioner trainings.
+
+:::
+
+##
+
+::: {.font100}
+
+Accessibility can be taught as part of language specific (e.g. R) and language agnostic trainings.
+
+:::
+
+##
+
+::: {.font100}
+
+Accessibility should be taught in a way that learners can apply their learning in non-data contexts.
+
+:::
+
+##
+
+::: {.font100}
+
+Students should be assessed on and held accountable for their accessibility practices.
+
+:::
+
+##
+
+::: {.font100}
+
+Accessibility is for everyone.
+
+:::
+        
+## QUESTIONS?
+`r fontawesome::fa(name = "link")`
+<a href = "http://minedogucu.com">minedogucu.com</a>  
+`r fontawesome::fa(name = "github")` <a href = "http://github.com/mdogucu">mdogucu</a>   
+`r fontawesome::fa(name = "twitter")` <a href = "http://twitter.com/MineDogucu">MineDogucu</a>  
+`r fontawesome::fa(name = "mastodon")` <a href = "https://mastodon.social/@MineDogucu">mastodon.social/@MineDogucu</a>  
+`r fontawesome::fa(name = "linkedin")` <a href = "https://www.linkedin.com/in/minedogucu/">minedogucu</a> 
+
+## References
+
+Prates, M. O., Avelar, P. H., and Lamb, L. C. (2019), “Assessing Gender Biasin Machine Translation: A Case Study with Google Translate,” NeuralComputing and Applications, 32, 6363–6381.
+
+Raji, I. D., and Buolamwini, J. (2019), “Actionable Auditing: Investigatingthe Impact of Publicly Naming Biased Performance Results of Commer-cial AI Products,” in Proceedings of the 2019 AAAI/ACM Conference onAI, Ethics, and Society, pp. 429–435.
+
+Disability Rights UK. (2021), “Self-Driving Cars Pose Threat for DisabledPeople,” Available at https://www.disabilityrightsuk.org/news/2021/april/self-driving-cars-pose-threat-disabled-people.
+
+##
+
+Meta Diversity Report (2022) "Embracing Change
+Through Inclusion: Meta’s 2022 Diversity Report"
+Available at https://about.fb.com/wp-content/uploads/2022/07/Meta_Embracing-Change-Through-Inclusion_2022-Diversity-Report.pdf.
+
+Google Diversity Annual Report (2023) Available at https://static.googleusercontent.com/media/about.google/en//belonging/diversity-annual-report/2023/static/pdfs/google_2023_diversity_annual_report.pdf?cachebust=2943cac.
+
+World Health Organization (2023). "Disability" Available at https://www.who.int/news-room/fact-sheets/detail/disability-and-health.
+
 
 ## QUESTIONS?
 `r fontawesome::fa(name = "link")`
