@@ -425,12 +425,6 @@ As educators, we have to ensure that the current and the next generation of data
 - Students should use at least one assistive technology (i.e. screen reader).
 - Students should consider different representations of data.
 
-##
-
-```{r}
-
-```
-
 
 ## Students can use screen reader on Windows and Mac
 
