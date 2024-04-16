@@ -128,7 +128,9 @@ knitr::include_graphics("img/bayes-rules-hex.png")
 
 
 
+##
 
+[Dogucu, M., Johnson, A. A., & Ott, M. (2023). *Framework for Accessible and Inclusive Teaching Materials for Statistics and Data Science Courses*. Journal of Statistics and Data Science Education. 31(2), 144-150.](https://www.tandfonline.com/doi/full/10.1080/26939169.2023.2165988)
 
 
 ## Open-Access
@@ -220,9 +222,7 @@ v.s.
 - Hotel bookings
 - Penguins
 
-##
 
-[Dogucu, M., Johnson, A. A., & Ott, M. (2023). *Framework for Accessible and Inclusive Teaching Materials for Statistics and Data Science Courses*. Journal of Statistics and Data Science Education. 31(2), 144-150.](https://www.tandfonline.com/doi/full/10.1080/26939169.2023.2165988)
 
 ##
 
@@ -426,12 +426,6 @@ As educators, we have to ensure that the current and the next generation of data
 - Students should consider different representations of data.
 
 
-## Students can use screen reader on Windows and Mac
-
-- If you are on a Windows machine go to Settings > Ease of Access > Narrator, and then turn on the toggle under Use Narrator.
-
-- If you are on a Mac go to System Preferences > Accessibility > Voice Over > Enable Voice Over
-
 ## Data Visualization - Colors
 
 
@@ -634,66 +628,7 @@ Different representations of data is one way of introducing accessibility to stu
 
 [Seo, J. & Dogucu, M. (2023) Teaching Visual Accessibility in Introductory Data Science Classes with Multi-Modal Data Representations Journal of Data Science. 21(2), 428-441.](https://jds-online.org/journal/JDS/article/1331/info)
 
-##
 
-::: {.font100}
-Recommendations for the Community
-:::
-
-##
-
-::: {.font100}
-
-~~A picture is worth a thousand words.~~
-
-An alternate text is worth thousand pictures.
-
-:::
-
-##
-
-::: {.font100}
-
-~~Fixing a typo is a good first contribution~~
-
-Fixing a typo and writing alternate text are good first contributions.
-
-:::
-
-
-
-
-##
-
-::: {.font100}
-
-Accessibility should be taught at undergraduate, graduate, and equivalent practitioner trainings.
-
-:::
-
-##
-
-::: {.font100}
-
-Accessibility can be taught as part of language specific (e.g. R) and language agnostic trainings.
-
-:::
-
-##
-
-::: {.font100}
-
-Accessibility should be taught in a way that learners can apply their learning in non-data contexts.
-
-:::
-
-##
-
-::: {.font100}
-
-Students should be assessed on and held accountable for their accessibility practices.
-
-:::
 
 ##
 
