@@ -179,7 +179,7 @@ The video shows use of a screen reader briefly.
 
 
 ```{r}
-#| fig-alt: GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created
+#| fig-alt: "GitHub issue created on RStudio's RMarkdown repo asking for fig.alt option to be created"
 #| fig-align: center
 #| out-width: 100%
 knitr::include_graphics("img/alttext-github-issue.png")
@@ -374,6 +374,7 @@ Supported by the [Teach Access](https://teachaccess.org/) network.
 #| echo: false
 #| out-width: 60%
 #| fig-align: center
+#| fig-alt: NSF logo
 knitr::include_graphics("img/nsf-logo.png")
 ```
 
