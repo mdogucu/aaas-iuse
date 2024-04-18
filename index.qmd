@@ -517,35 +517,13 @@ plot(cars)
 ```
 
 
-## Manual Alternate Text
+## Best Practices for Alternate Text in Data Science Context 
 
-:::: {.columns}
+- [Cesal, 2020](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81)
 
-::: {.column width="50%"}
-- Chart type
 
-- Type of data
+- [Canelón & Hare, 2021 ](https://www.youtube.com/watch?v=DxLkv2iRdf8&ab_channel=csvconf)
 
-- Reason for including the chart
-
-- Link to data or source (not in alt text but in main text)
-
-[Cesal, 2020](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81)
-:::
-
-::: {.column width="50%"}
-- Description conveys meaning in the data
-
-- Variables included on the axes
-
-- Scale described within the description
-
-- Type of plot is described
-
-[Canelón & Hare, 2021 ](https://www.youtube.com/watch?v=DxLkv2iRdf8&ab_channel=csvconf)
-:::
-
-::::
 
 
 ## Alternate Texts are Under Utilized in the Data Science Community
